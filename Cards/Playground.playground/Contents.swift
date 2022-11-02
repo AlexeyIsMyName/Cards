@@ -34,6 +34,10 @@ class MyViewController : UIViewController {
         self.view.addSubview(secondCardView)
         secondCardView.isFlipped = true
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesBegan Controller")
+    }
 }
 
 // Present the view controller in the Live View window
@@ -298,6 +302,18 @@ class CardView<ShapeType: ShapeLayerProtocol>: UIView, FlippableView {
             self.addSubview(backSideView)
         }
     }
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("touchesBegan Card")
+//    }
+//
+//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("touchesMoved Card")
+//    }
+//
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        print("touchesEnded Card")
+//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
